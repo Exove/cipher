@@ -104,9 +104,7 @@ CSS
 	 * @since 1.1
 	 */
 	public function wpWillLoadScripts() {
-		$suffix =  ( defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ) ? '' : '.min';
-		
-		wp_enqueue_script( 'cipher', $this->plugin->url( 'js/cipher' . $suffix . '.js' ), null, Cipher::VERSION );
+		wp_enqueue_script( 'cipher', $this->plugin->url( 'js/cipher.js' ), null, Cipher::VERSION );
 	}	
 }
 ?>

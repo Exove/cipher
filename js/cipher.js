@@ -89,8 +89,9 @@ var Cipher = (function($) {
 			$( '#cipher-cancel' ).bind( 'click', _self.close );
 			$( _dialog.textarea ).bind( 'keydown', _self.keyDown );
 			
+      _dialog.view.wpdialog = _self.wpdialog;
 			_dialog.view.bind( 'submit', _self.onSubmit );
-			_dialog.view.bind( 'keyup', _self.keyUp );
+      _dialog.view.bind( 'keyup', _self.keyUp );
 			_dialog.view.bind( 'wpdialogbeforeopen', _self.beforeOpen );
 			_dialog.view.bind( 'wpdialogclose', _self.onClose );
 			
@@ -119,7 +120,16 @@ var Cipher = (function($) {
 
 			_config   = config;
 			_encRegex = new RegExp( '[' + char_list + ']', 'g' );
-		},
+    },
+    
+    wpdialog: function( param ) {
+      if (param instanceof Object) {
+        _dialog.view.addClass(param.dialogClass);
+        _dialog.view.css(param);
+      } else {
+        _dialog.view.toggle();
+      }
+    },
 		
 		/**
 		 * @param {object} button
@@ -127,15 +137,21 @@ var Cipher = (function($) {
 		 */
 		open: function( button, target ) {
 			_editorInit( target );
-			
+      
 			if (! _dialog.view.data('wpdialog') ) {
+        var width = 600;
 				_dialog.view.wpdialog({
-					title: _config.dialogTitle,
-					width: 600,
+          title: _config.dialogTitle,
+					width: width,
 					height: 'auto',
 					modal: true,
 					dialogClass: 'wp-dialog',
-					zIndex: 300000
+					zIndex: 300000,
+          position: 'fixed',
+          top: '25%',
+          left: '50%',
+          marginLeft: width/2*-1,
+          border: 'solid 1px grey'
 				});
 			}
 			
