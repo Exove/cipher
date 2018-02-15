@@ -1,0 +1,9 @@
+{
+  "name": "Exove/cipher",
+  "description": "Replaces wordpress content-editor's code-button to modal window where you can paste code",
+  "type": "wordpress-plugin",
+  "minimum-stability": "dev",
+  "require": {
+    "composer/installers": "~1.0"
+  }
+}
