@@ -36,6 +36,7 @@ General improvements, compatibility changes and a bonus mini-feature.
 == Changelog ==
 
 = 1.11 =
+* Made the code snippet button label and tooltip clearer.
 * Fix for a JS error when clicking the snippet button.
 
 = 1.1 =

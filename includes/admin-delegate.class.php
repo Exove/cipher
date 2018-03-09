@@ -75,7 +75,7 @@ CSS
 	 * @since 1.1
 	 */
 	public function wpWillRendedFooter() {
-		echo '<form id="cipher"><p class="howto">', __( 'Enter/Edit the code snippet', 'cipher' ), '</p>',
+		echo '<form id="cipher"><p class="howto">', __( 'Enter a code snippet', 'cipher' ), '</p>',
 		     '<textarea id="cipher-code-area" cols="50" rows="20"></textarea>',
 		     '<label><input type="checkbox" checked="checked" id="cipher-wrap-checkbox" value="1"> ',
 		     __( 'Enclose snippet in: ', 'cipher' ), '</label>',
@@ -92,8 +92,8 @@ CSS
 	 */
 	public function wpWillPrintScriptsInFooter() {
 		echo '<script>jQuery(document).ready(Cipher.init({',
-		     'qTitle:"', __( 'Insert/Edit a code snippet', 'cipher' ), '",',
-		     'dialogTitle:"', __( 'Insert/Edit Snippet', 'cipher' ), '",',
+		     'qTitle:"', __( 'Insert a code snippet', 'cipher' ), '",',
+		     'dialogTitle:"', __( 'Insert Snippet', 'cipher' ), '",',
 		     'submitTitles:["', __( 'Insert Snippet', 'cipher' ), '", "',
 		     __( 'Update Snippet', 'cipher' ), '"]', '}));</script>';
 	}

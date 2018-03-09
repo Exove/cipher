@@ -100,7 +100,7 @@ var Cipher = (function($) {
 			
 			QTags.addButton( 'pre', 'pre+code', _self.tag, '', '', '', 109 );
 			QTags.addButton( 'code', 'code', _self.tag, '', 'c', '', 110 );
-			QTags.addButton( 'snippet', 'snippet', _self.open, '', '', config.qTitle, 111 );
+			QTags.addButton( 'snippet', 'insert code snippet', _self.open, '', '', config.qTitle, 111 );
 			
 			// If we are in a comment related page, we update the encoding dictionary 
 			// with a few additional characters that will prevent WordPress from hyperlinking URI(s)
