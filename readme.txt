@@ -1,9 +1,9 @@
 === Cipher ===
-Contributors: _luigi
+Contributors: _luigi, Atte Liimatainen, Aleksandr Beliaev
 Tags: admin, backticks, blocks, code, encode, comment, editor, plugin, pre, pre-formatted, publish, quicktag, snippet, wordpress
 Requires at least: PHP 5.3+ and WordPress 3.4
 Tested up to: 3.6
-Stable tag: 1.1
+Stable tag: 1.11
 License: GPL v3.0
 License URI: license.txt
 
@@ -34,6 +34,9 @@ Upload in the 'plugins' folder and activate.
 General improvements, compatibility changes and a bonus mini-feature. 
 
 == Changelog ==
+
+= 1.11 =
+* Fix for a JS error when clicking the snippet button.
 
 = 1.1 =
 * New: while clicking on 'code' or 'pre+code', the encoding of the selected text can be disallowed by holding the Alt key.
